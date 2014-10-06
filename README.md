@@ -4,8 +4,8 @@ Security Support
 Contains Utilities for Security Support
 
 
-# Cipher Utilites
-## AES Encryption with padding
+## Cipher Utilites
+### AES Encryption with padding
 Example:
 ```
 String textToEncrypt = "Text to encrypt";
@@ -15,4 +15,4 @@ Cipher cipher = CipherFactory.aesCipher();
 String encryptedText = cipher.encrypt(textToEncrypt, encryptionKey);
 Assert.assertEquals(cipher.decrypt(encryptedText, encryptionKey),textToEncrypt);
 ```		
-* Please note that the length of the encryption key should always be a multiple of 16.
+* Please note that the length of the encryption key should always be a multiple of 16. *

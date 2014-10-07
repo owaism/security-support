@@ -17,7 +17,6 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.hibernate.validator.constraints.NotBlank;
 import org.testng.util.Strings;
 
 import com.google.common.base.Preconditions;
@@ -81,7 +80,7 @@ public class AESCipher implements info.owaism.security.Cipher {
 	 * @see info.owaism.social.fb.sdk.security.Cipher#decrypt(java.lang.String,
 	 * java.lang.String, java.lang.String)
 	 */
-	public String decrypt(@NotBlank String encryptedText, @NotBlank String key) {
+	public String decrypt(String encryptedText, String key) {
 		validateKey(key);
 
 		Preconditions.checkArgument(!Strings.isNullOrEmpty(encryptedText),

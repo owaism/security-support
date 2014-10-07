@@ -4,7 +4,6 @@
  */
 package info.owaism.security;
 
-import org.hibernate.validator.constraints.NotBlank;
 
 /**
  * Cipher to be used for encryption and decryption.
@@ -19,7 +18,7 @@ public interface Cipher {
 	 *            Key to use for encryption.
 	 * @return Encrypted text
 	 */
-	String encrypt(@NotBlank String plainText, @NotBlank String encryptionKey);
+	String encrypt(String plainText, String encryptionKey);
 
 	/**
 	 * Decrypts text encrypted by {@link Cipher#encrypt(String, String, String)}
@@ -31,6 +30,6 @@ public interface Cipher {
 	 *            Key to used for encryption. 
 	 * @return Plain Text.
 	 */
-	String decrypt(@NotBlank String encryptedText, @NotBlank String decryptionKey);
+	String decrypt(String encryptedText, String decryptionKey);
 
 }

@@ -17,9 +17,8 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.testng.util.Strings;
-
 import com.google.common.base.Preconditions;
+import com.google.common.base.Strings;
 
 /**
  * AES Cipher to be used for encryption and decryption using the AES algorithm.
